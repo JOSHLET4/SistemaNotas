@@ -9,7 +9,7 @@
 }
 
 .navbar {
-    --bs-navbar-brand-font-size: 0.50vw;
+    --bs-navbar-brand-font-size: 2rem; /* Tamaño inicial */
 }
 
 .button {
@@ -17,15 +17,33 @@
 }
 
 .btn {
-    --bs-btn-font-size: 1.5vw;
+    --bs-btn-font-size: 1.5rem;
 }
 
-@media screen and (min-width: 537px) and (min-height: 600px) {
-    .navbar {
-        --bs-navbar-brand-font-size: 3.0vw;
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 1.2vw;
     }
-
+    
+    .navbar {
+        --bs-navbar-brand-font-size: 2.5rem;
+    }
+    
     .btn {
-        --bs-btn-font-size: 0.50vw;
+        --bs-btn-font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 1.4vw;
+    }
+    
+    .navbar {
+        --bs-navbar-brand-font-size: 3rem;
+    }
+    
+    .btn {
+        --bs-btn-font-size: 1rem;
     }
 }

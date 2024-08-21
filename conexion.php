@@ -3,7 +3,7 @@
     $PORT = "3306";
     $NOMBREBD = "railway";
     $USUARIO = "root";
-    $PASSWORD = "eHvddwlFynXWSMlTzgAnaLFkhxUBrrCd";
+    $PASSWORD = "QUwMKUeZXmjhzDiSqKiUtIboHoocbaIB";
 
     try {
         $conexion = new PDO("mysql:host=$SERVIDOR;port=$PORT;dbname=$NOMBREBD", $USUARIO, $PASSWORD);

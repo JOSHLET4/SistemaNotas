@@ -1,12 +1,12 @@
 <?php 
-    $servidor = "127.0.0.1";
-    $port = "3310";
-    $nombreBD = "notaseducativas";
-    $usuario = "root";
-    $contrasenia = "";
+    $SERVIDOR = "127.0.0.1";
+    $PORT = "3310";
+    $NOMBREBD = "notaseducativas";
+    $USUARIO = "root";
+    $PASSWORD = "";
 
     try {
-        $conexion = new PDO("mysql:host=$servidor;port=$port dbname=$nombreBD", $usuario, $contrasenia);
+        $conexion = new PDO("mysql:host=$SERVIDOR;port=$PORT dbname=$NOMBREBD", $USUARIO, $PASSWORD);
         $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     } catch (PDOExeption $e) {

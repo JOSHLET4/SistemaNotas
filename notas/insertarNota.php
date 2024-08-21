@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
     header('Location: ../index.php');
     exit;
 }
-    require '../conexion.php';
+    require '../app/conexion.php';
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $notaZ = $_POST['notaZInp'];

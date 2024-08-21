@@ -1,8 +1,27 @@
 .navbar {
     position: relative;
 }
+
 .navbar-toggler {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.navbar {
+    --bs-navbar-brand-font-size: 1.25vw;
+}
+
+.button {
+    width: 45%;
+}
+
+@media screen and (min-width: 537px) and (min-height: 600px) {
+    .navbar {
+        --bs-navbar-brand-font-size: 3.0vw;
+    }
+
+    .btn {
+        --bs-btn-font-size: 2.50vw;
+    }
 }

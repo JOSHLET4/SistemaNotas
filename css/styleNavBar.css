@@ -1,5 +1,6 @@
 .navbar {
-    position: relative;
+    position: fixed;
+    z-index: 1030;
 }
 
 .navbar-toggler {

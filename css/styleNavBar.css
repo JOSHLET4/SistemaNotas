@@ -9,7 +9,7 @@
 }
 
 .navbar {
-    --bs-navbar-brand-font-size: 1.25vw;
+    --bs-navbar-brand-font-size: 0.50vw;
 }
 
 .button {
@@ -22,6 +22,6 @@
     }
 
     .btn {
-        --bs-btn-font-size: 2.50vw;
+        --bs-btn-font-size: 0.50vw;
     }
 }

@@ -5,40 +5,27 @@ if(!isset($_SESSION['username'])) {
     exit;
 }
 
-require '../conexion.php';
+    require '../conexion.php';
 
-$mensajeError = '';
+    if(isset($_GET['idCursoAct'])) {
+        $id = $_GET['idCursoAct'];
 
-if(isset($_GET['idCursoAct'])) {
-    $id = $_GET['idCursoAct'];
+        $consultaSQL = 'SELECT * FROM tbl_cursos WHERE idCurso = :id';
+        $sentencia = $conexion->prepare($consultaSQL);
+        $sentencia->bindParam(':id', $id, PDO::PARAM_INT);
+        $sentencia->execute();
+        $curso = $sentencia->fetch(PDO::FETCH_ASSOC);
+        if($curso === false) {
+            echo "Curso no encontrado";
+        }
 
-    $consultaSQL = 'SELECT * FROM tbl_cursos WHERE idCurso = :id';
-    $sentencia = $conexion->prepare($consultaSQL);
-    $sentencia->bindParam(':id', $id, PDO::PARAM_INT);
-    $sentencia->execute();
-    $curso = $sentencia->fetch(PDO::FETCH_ASSOC);
-    
-    if($curso === false) {
-        echo "Curso no encontrado";
-        exit;
-    }
+        if($_SERVER['REQUEST_METHOD'] == "POST") {
+            $nombre = $_POST['nombreInp'];
+            $descripcion = $_POST['descripcionInp'];
+            $fechaInicio = $_POST['fechaInicioInp'];
+            $fechaFin = $_POST['fechaFinInp'];
+            $idProfesor = $_POST['idProfesorInp'];
 
-    if($_SERVER['REQUEST_METHOD'] == "POST") {
-        $nombre = $_POST['nombreInp'];
-        $descripcion = $_POST['descripcionInp'];
-        $fechaInicio = $_POST['fechaInicioInp'];
-        $fechaFin = $_POST['fechaFinInp'];
-        $idProfesor = $_POST['idProfesorInp'];
-
-        $consultaProfesorSQL = 'SELECT * FROM tbl_profesores WHERE idProfesor = :idProfesor';
-        $sentenciaProfesor = $conexion->prepare($consultaProfesorSQL);
-        $sentenciaProfesor->bindParam(':idProfesor', $idProfesor, PDO::PARAM_INT);
-        $sentenciaProfesor->execute();
-        $profesor = $sentenciaProfesor->fetch(PDO::FETCH_ASSOC);
-
-        if($profesor === false) {
-            $mensajeError = "El profesor no existe";
-        } else {
             $actualizarSQL = 'UPDATE tbl_cursos SET nombreCurso = :nombre, descripcion = :descripcion, fechaInicio = :fechaInicio, fechaFin = :fechaFin, idProfesor = :idProfesor WHERE idCurso = :id';
             $sentencia = $conexion->prepare($actualizarSQL);
             $sentencia->bindParam(':nombre', $nombre);
@@ -55,7 +42,6 @@ if(isset($_GET['idCursoAct'])) {
             }
         }
     }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,14 +57,10 @@ if(isset($_GET['idCursoAct'])) {
         <h1>ACTUALIZAR CURSO</h1>
         <form method="POST" class="mb-3 row">
             Nombre: <input class="form-control" type="text" name="nombreInp" value="<?php echo htmlspecialchars($curso["nombreCurso"]) ?>" required><br>
-            Descripción: <input class="form-control" type="text" name="descripcionInp" value="<?php echo htmlspecialchars($curso['descripcion']) ?>" required><br>
+            Descripcion: <input class="form-control" type="text" name="descripcionInp" value="<?php echo htmlspecialchars($curso['descripcion']) ?>" required><br>
             Fecha de inicio: <input class="form-control" type="text" name="fechaInicioInp" value="<?php echo htmlspecialchars($curso['fechaInicio']) ?>" required><br>
-            Fecha de finalización: <input class="form-control" type="text" name="fechaFinInp" value="<?php echo htmlspecialchars($curso['fechaFin']) ?>" required><br>
-            Código del profesor: 
-            <input class="form-control" type="number" name="idProfesorInp" value="<?php echo htmlspecialchars($curso['idProfesor']) ?>" required><br>
-            <?php if ($mensajeError): ?>
-                <div class="alert alert-danger"><?php echo htmlspecialchars($mensajeError); ?></div>
-            <?php endif; ?>
+            Fecha de dinalización: <input class="form-control" type="text" name="fechaFinInp" value="<?php echo htmlspecialchars($curso['fechaFin']) ?>" required><br>
+            Código del profesor: <input class="form-control" type="number" name="idProfesorInp" value="<?php echo htmlspecialchars($curso['idProfesor']) ?>" required><br>
             <hr>
             <input type="submit" value="Actualizar Curso" class="btn btn-success">
         </form>

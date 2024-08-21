@@ -152,3 +152,8 @@ main {
     background-color: #fff;
   }
   
+  @media screen and (max-width: 996px) {
+    body {
+        padding-top: 60px;
+    }
+  }

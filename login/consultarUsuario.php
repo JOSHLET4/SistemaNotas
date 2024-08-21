@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
     header('Location: ../index.php');
     exit;
 }
-    require '../app/conexion.php';
+    require '../conexion.php';
 
     $where = "";
     $id = $_GET['usuId'] ?? '';

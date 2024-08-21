@@ -5,7 +5,7 @@ if(!isset($_SESSION['username'])) {
     exit;
 }
 
-    require '../app/conexion.php';
+    require '../conexion.php';
 
     if(isset($_GET['idCursoAct'])) {
         $id = $_GET['idCursoAct'];

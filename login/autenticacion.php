@@ -1,5 +1,5 @@
 <?php 
-require '../app/conexion.php';
+require '../conexion.php';
 
 session_start();
 

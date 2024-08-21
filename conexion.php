@@ -1,9 +1,9 @@
 <?php 
-    $SERVIDOR = "127.0.0.1";
-    $PORT = "3310";
-    $NOMBREBD = "notaseducativas";
+    $SERVIDOR = "mysql.railway.internal";
+    $PORT = "3306";
+    $NOMBREBD = "railway";
     $USUARIO = "root";
-    $PASSWORD = "";
+    $PASSWORD = "eHvddwlFynXWSMlTzgAnaLFkhxUBrrCd";
 
     try {
         $conexion = new PDO("mysql:host=$SERVIDOR;port=$PORT dbname=$NOMBREBD", $USUARIO, $PASSWORD);

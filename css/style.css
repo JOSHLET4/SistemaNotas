@@ -5,6 +5,10 @@ section {
     background-color: rgb(71, 69, 69);
 }
 
+body {
+  padding-top: 70px
+}
+
 main {
     color: white;
     text-align: center;

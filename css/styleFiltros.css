@@ -1,0 +1,15 @@
+.seccionFiltro {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.filtroForm {
+    width: 20%;
+}
+
+.filtroForm input,
+.filtroForm select,
+.filtroForm button {
+    margin-bottom: 2%;
+}

@@ -1,0 +1,21 @@
+/* Forma Actualizar Estudiante */
+body {
+    background-color: rgb(71, 69, 69) !important;
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+}

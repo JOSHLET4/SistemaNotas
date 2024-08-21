@@ -5,7 +5,7 @@ session_start();
 
 // Validación si se ha enviado información
 if (!isset($_POST['username'], $_POST['password'])) {
-    header('Location: ../index.html');
+    header('Location: ../index.php');
     exit;
 }
 
@@ -22,11 +22,11 @@ if ($user) {
         header('Location: ../dashboard.php');
         exit;
     } else {
-        header('Location: ../index.html');
+        header('Location: ../index.php');
         exit;
     }
 } else {
-    header('Location: ../index.html');
+    header('Location: ../index.php');
     exit;
 }
 ?>

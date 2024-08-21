@@ -5,10 +5,6 @@ section {
     background-color: rgb(71, 69, 69);
 }
 
-body {
-  padding-top: 70px
-}
-
 main {
     color: white;
     text-align: center;
@@ -150,10 +146,4 @@ main {
   
   .button:hover .button_lg::after {
     background-color: #fff;
-  }
-  
-  @media screen and (max-width: 996px) {
-    body {
-        padding-top: 60px;
-    }
   }

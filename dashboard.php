@@ -42,7 +42,7 @@ if (!isset($_SESSION['username'])) {
         <button class="button">
             <span class="button_lg">
                 <span class="button_sl"></span>
-                <a href="/media/images/entidadRelacion.png" download="entidadRelacion">
+                <a href="/media/images/entidadRelacion.png" download="entidadRelacion" target="_blank">
                     <span class="button_text">Descargar Entidad Relación</span>
                 </a>
             </span>
@@ -50,7 +50,7 @@ if (!isset($_SESSION['username'])) {
         <button class="button">
             <span class="button_lg">
                 <span class="button_sl"></span>
-                <a href="/media/documents/Manual de Usuario.pdf" dowload="entidadRelacion">
+                <a href="/media/documents/Manual de Usuario.pdf" dowload="entidadRelacion" target="_blank">
                     <span class="button_text">Descargar Manual de Usuario</span>
                 </a>
             </span>

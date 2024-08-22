@@ -60,7 +60,7 @@ if (!isset($_SESSION['username'])) {
             Hora de inicio: <input class="form-control" type="text" name="horaInicioInp" value="<?php echo htmlspecialchars($horario['horaInicio']) ?>" required><br>
             Hora de finalización: <input class="form-control" type="text" name="horaFinInp" value="<?php echo htmlspecialchars($horario['horaFin']) ?>" required><br>
             Aula: <input class="form-control" type="text" name="aulaInp" value="<?php echo htmlspecialchars($horario['aula']) ?>" required><br>
-            ID del curso: <input class="form-control" type="text" name="idCursoInp" value="<?php echo htmlspecialchars($horario['idCurso']) ?>" required><br>
+            ID del curso: <input class="form-control" type="number" name="idCursoInp" value="<?php echo htmlspecialchars($horario['idCurso']) ?>" required><br>
             <hr>
             <input type="submit" value="Actualizar Horario" class="btn btn-success">
         </form>

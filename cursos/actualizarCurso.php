@@ -58,8 +58,8 @@ if(!isset($_SESSION['username'])) {
         <form method="POST" class="mb-3 row">
             Nombre: <input class="form-control" type="text" name="nombreInp" value="<?php echo htmlspecialchars($curso["nombreCurso"]) ?>" required><br>
             Descripcion: <input class="form-control" type="text" name="descripcionInp" value="<?php echo htmlspecialchars($curso['descripcion']) ?>" required><br>
-            Fecha de inicio: <input class="form-control" type="text" name="fechaInicioInp" value="<?php echo htmlspecialchars($curso['fechaInicio']) ?>" required><br>
-            Fecha de dinalización: <input class="form-control" type="text" name="fechaFinInp" value="<?php echo htmlspecialchars($curso['fechaFin']) ?>" required><br>
+            Fecha de inicio: <input class="form-control" type="date" name="fechaInicioInp" value="<?php echo htmlspecialchars($curso['fechaInicio']) ?>" required><br>
+            Fecha de dinalización: <input class="form-control" type="date" name="fechaFinInp" value="<?php echo htmlspecialchars($curso['fechaFin']) ?>" required><br>
             Código del profesor: <input class="form-control" type="number" name="idProfesorInp" value="<?php echo htmlspecialchars($curso['idProfesor']) ?>" required><br>
             <hr>
             <input type="submit" value="Actualizar Curso" class="btn btn-success">

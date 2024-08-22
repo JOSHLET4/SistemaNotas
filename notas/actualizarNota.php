@@ -82,8 +82,8 @@ if (!isset($_SESSION['username'])) {
             Nota Final: <input class="form-control" type="number" name="notaFInp" value="<?php echo htmlspecialchars($nota['notaFinal']) ?>"><br>
             Fecha de evaluación final: <input class="form-control" type="text" name="fechaEvInp" value="<?php echo htmlspecialchars($nota['fechaEvaluacion']) ?>"><br>
             Nota Total: <input class="form-control" type="number" name="notaTInp" value="<?php echo htmlspecialchars($nota['notaTotal']) ?>" readonly><br>
-            ID del estudiante: <input class="form-control" type="text" name="idEstudianteInp" value="<?php echo htmlspecialchars($nota['idEstudiante']) ?>"><br>
-            ID del curso: <input class="form-control" type="text" name="idCursoInp" value="<?php echo htmlspecialchars($nota['idCurso']) ?>"><br>
+            ID del estudiante: <input class="form-control" type="number" name="idEstudianteInp" value="<?php echo htmlspecialchars($nota['idEstudiante']) ?>"><br>
+            ID del curso: <input class="form-control" type="number" name="idCursoInp" value="<?php echo htmlspecialchars($nota['idCurso']) ?>"><br>
             <hr>
             <input type="submit" value="Actualizar Nota" class="btn btn-success">
         </form>
